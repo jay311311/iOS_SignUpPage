@@ -13,6 +13,9 @@
 		672F6CD127BB7468006899C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672F6CCF27BB7468006899C8 /* Main.storyboard */; };
 		672F6CD327BB7469006899C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672F6CD227BB7469006899C8 /* Assets.xcassets */; };
 		672F6CD627BB7469006899C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672F6CD427BB7469006899C8 /* LaunchScreen.storyboard */; };
+		672F6CE027BB7777006899C8 /* addSigninInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672F6CDF27BB7777006899C8 /* addSigninInfo.swift */; };
+		672F6CE227BB7921006899C8 /* addUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672F6CE127BB7921006899C8 /* addUserInfo.swift */; };
+		672F6CE427BE1978006899C8 /* userInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672F6CE327BE1978006899C8 /* userInfomation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		672F6CD227BB7469006899C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		672F6CD527BB7469006899C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672F6CD727BB7469006899C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		672F6CDF27BB7777006899C8 /* addSigninInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addSigninInfo.swift; sourceTree = "<group>"; };
+		672F6CE127BB7921006899C8 /* addUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addUserInfo.swift; sourceTree = "<group>"; };
+		672F6CE327BE1978006899C8 /* userInfomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userInfomation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				672F6CCB27BB7468006899C8 /* SceneDelegate.swift */,
 				672F6CCD27BB7468006899C8 /* ViewController.swift */,
 				672F6CCF27BB7468006899C8 /* Main.storyboard */,
+				672F6CE327BE1978006899C8 /* userInfomation.swift */,
+				672F6CDF27BB7777006899C8 /* addSigninInfo.swift */,
+				672F6CE127BB7921006899C8 /* addUserInfo.swift */,
 				672F6CD227BB7469006899C8 /* Assets.xcassets */,
 				672F6CD427BB7469006899C8 /* LaunchScreen.storyboard */,
 				672F6CD727BB7469006899C8 /* Info.plist */,
@@ -141,6 +150,9 @@
 				672F6CCE27BB7468006899C8 /* ViewController.swift in Sources */,
 				672F6CCA27BB7468006899C8 /* AppDelegate.swift in Sources */,
 				672F6CCC27BB7468006899C8 /* SceneDelegate.swift in Sources */,
+				672F6CE027BB7777006899C8 /* addSigninInfo.swift in Sources */,
+				672F6CE427BE1978006899C8 /* userInfomation.swift in Sources */,
+				672F6CE227BB7921006899C8 /* addUserInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
