@@ -12,7 +12,7 @@ class UserInfo{
     static let shared:UserInfo  = UserInfo()
     
     var id : String?
-    var profilePhoto : UIImage?
+    var profilePhoto : String?
     var password :String?
     var name : String?
     var adult : String?

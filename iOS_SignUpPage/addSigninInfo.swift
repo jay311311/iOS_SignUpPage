@@ -9,19 +9,32 @@ import UIKit
 
 class addSigninInfo: UIViewController {
     
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var id: UITextField!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var checkPassword: UITextField!
+    @IBOutlet weak var profileImage : UIImageView!
+    @IBOutlet weak var id : UITextField!
+    @IBOutlet weak var password : UITextField!
+    @IBOutlet weak var checkPassword : UITextField!
+    @IBOutlet weak var nextButton : UIButton!
 
-  let picker = UIImagePickerController()
+    let picker = UIImagePickerController()
+    let signInfo =  UserInfo.shared
     
+    var dubleCheckPassword : Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     picker.delegate = self
-
+        id.delegate = self
+        password.delegate = self
+        checkPassword.delegate = self
+        nextButton.isEnabled = false
         // Do any additional setup after loading the view.
+    }
+    
+
+    
+    func checkInfomationValu (){
+      
+      
     }
     
 
@@ -38,23 +51,45 @@ class addSigninInfo: UIViewController {
         alert.addAction(cancel)
         
         present(alert, animated: true, completion: nil)
-        
-        
-    }
-    
-   
-    
-    @IBAction func editingId(_ sender: Any) {
     }
     
     
-    @IBAction func editingPassword(_ sender: Any) {
+    @IBAction func editingId(_ sender: UITextField) {
+        guard let idValue = sender.text else { return }
+        signInfo.id = idValue
+    }
+    
+    
+    @IBAction func editingPassword(_ sender: UITextField) {
+        guard let passwordValue = sender.text else { return }
+        signInfo.password = passwordValue
     }
     
 
+    @IBAction func checkPassword(_ sender: UITextField) {
+        guard let rePassword = sender.text else { return }
+        
+        if rePassword == signInfo.password {
+            dubleCheckPassword = true
+        }
+    }
+    
     
     
 }
+extension addSigninInfo : UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        print("\(textField.text!)\textEndEdinting Delegate")
+        if signInfo.profilePhoto != nil && signInfo.id != nil && signInfo.password != nil && dubleCheckPassword == true{
+            nextButton.isEnabled = true
+            print("enabel")
+       }
+        return true
+    }
+ 
+}
+
 
 extension addSigninInfo : UIImagePickerControllerDelegate & UINavigationControllerDelegate{
     
@@ -72,19 +107,19 @@ extension addSigninInfo : UIImagePickerControllerDelegate & UINavigationControll
         present(picker, animated: false, completion: nil)
         }else{
             print("this is not a real iphone")
-
         }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
-        if let img  =  info[UIImagePickerController.InfoKey.originalImage] as?  UIImage {
-            print(info)
+        if let img  =  info[UIImagePickerController.InfoKey.originalImage] as?  UIImage, let imgURL  =  info[UIImagePickerController.InfoKey.originalImage]  {
+           // print("\(info[UIImagePickerController.InfoKey.imageURL])")
             profileImage.image = img
             dismiss(animated: true, completion: nil)
-            UserInfo.shared.profilePhoto = img
+            UserInfo.shared.profilePhoto = "\(imgURL)"
             
             
         }
+        
     }
     
     

@@ -118,7 +118,7 @@
                                         <rect key="frame" x="183" y="119" width="175" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
                                             <action selector="editingId:" destination="zoQ-4Z-HMr" eventType="editingDidEnd" id="nmE-fk-scR"/>
                                         </connections>
@@ -127,7 +127,7 @@
                                         <rect key="frame" x="183" y="163" width="175" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
                                             <action selector="editingPassword:" destination="zoQ-4Z-HMr" eventType="editingDidEnd" id="53x-Y2-JuD"/>
                                         </connections>
@@ -136,9 +136,9 @@
                                         <rect key="frame" x="183" y="205" width="175" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
-                                            <action selector="checkPassword:" destination="zoQ-4Z-HMr" eventType="editingDidEnd" id="fWH-a7-BKm"/>
+                                            <action selector="checkPassword:" destination="zoQ-4Z-HMr" eventType="editingDidEnd" id="QDn-J1-bBm"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -152,6 +152,7 @@
                     <connections>
                         <outlet property="checkPassword" destination="Qm5-rl-mnH" id="TJQ-Nh-3kh"/>
                         <outlet property="id" destination="BnZ-k5-RCH" id="BfP-LA-LpO"/>
+                        <outlet property="nextButton" destination="GN0-VN-X1c" id="86M-xU-Z5s"/>
                         <outlet property="password" destination="1Vk-jW-eV0" id="lY8-JA-2eg"/>
                         <outlet property="profileImage" destination="TQr-ec-xld" id="198-TD-SKK"/>
                     </connections>
