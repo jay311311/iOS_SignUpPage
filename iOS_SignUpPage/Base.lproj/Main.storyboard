@@ -58,7 +58,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="회원가입"/>
                                         <connections>
-                                            <segue destination="zoQ-4Z-HMr" kind="show" id="tAk-0u-fX9"/>
+                                            <segue destination="zoQ-4Z-HMr" kind="show" id="caq-90-90q"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -69,6 +69,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Tzw-D8-FFZ"/>
+                    <connections>
+                        <outlet property="id" destination="FeF-Zg-V3Z" id="hp7-p9-5zm"/>
+                        <outlet property="password" destination="Kah-hi-Ar3" id="m7A-jR-Gfa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,15 +92,14 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
                                 <connections>
-                                    <action selector="goNextPage:" destination="zoQ-4Z-HMr" eventType="touchUpInside" id="s9e-uT-4OG"/>
-                                    <segue destination="Ug9-bI-VRb" kind="show" id="hmD-Ll-Mpl"/>
+                                    <segue destination="Ug9-bI-VRb" kind="show" id="sDD-m3-cs7"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGI-ez-lqt">
                                 <rect key="frame" x="20" y="268" width="374" height="361"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQr-ec-xld">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQr-ec-xld">
                                         <rect key="frame" x="17" y="119" width="124" height="122"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,7 +120,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="EditingId:" destination="zoQ-4Z-HMr" eventType="editingDidEnd" id="IdI-O4-OAK"/>
                                             <action selector="editingId:" destination="zoQ-4Z-HMr" eventType="editingDidEnd" id="nmE-fk-scR"/>
                                         </connections>
                                     </textField>
@@ -150,7 +152,6 @@
                     <connections>
                         <outlet property="checkPassword" destination="Qm5-rl-mnH" id="TJQ-Nh-3kh"/>
                         <outlet property="id" destination="BnZ-k5-RCH" id="BfP-LA-LpO"/>
-                        <outlet property="nextButton" destination="GN0-VN-X1c" id="yZO-OO-xqi"/>
                         <outlet property="password" destination="1Vk-jW-eV0" id="lY8-JA-2eg"/>
                         <outlet property="profileImage" destination="TQr-ec-xld" id="198-TD-SKK"/>
                     </connections>
