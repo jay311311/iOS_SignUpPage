@@ -17,28 +17,17 @@ class addSigninInfo: UIViewController {
 
     let picker = UIImagePickerController()
     let signInfo =  UserInfo.shared
-    
     var dubleCheckPassword : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    picker.delegate = self
+        picker.delegate = self
         id.delegate = self
         password.delegate = self
         checkPassword.delegate = self
         nextButton.isEnabled = false
         // Do any additional setup after loading the view.
     }
-    
-
-    
-    func checkInfomationValu (){
-      
-      
-    }
-    
-
-    
     
     @IBAction func addPhoto(_ sender: UIButton) {
         let alert  = UIAlertController(title: "원하는 타이틀", message: "원하는 메세지", preferredStyle: .actionSheet)
@@ -53,46 +42,36 @@ class addSigninInfo: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    
     @IBAction func editingId(_ sender: UITextField) {
         guard let idValue = sender.text else { return }
         signInfo.id = idValue
     }
-    
     
     @IBAction func editingPassword(_ sender: UITextField) {
         guard let passwordValue = sender.text else { return }
         signInfo.password = passwordValue
     }
     
-
     @IBAction func checkPassword(_ sender: UITextField) {
         guard let rePassword = sender.text else { return }
-        
         if rePassword == signInfo.password {
             dubleCheckPassword = true
         }
     }
     
-    
-    
 }
 extension addSigninInfo : UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         textField.resignFirstResponder()
-        print("\(textField.text!)\textEndEdinting Delegate")
-        if signInfo.profilePhoto != nil && signInfo.id != nil && signInfo.password != nil && dubleCheckPassword == true{
+        if signInfo.profilePhoto != nil && signInfo.id != nil && signInfo.password != nil && dubleCheckPassword {
             nextButton.isEnabled = true
-            print("enabel")
        }
         return true
     }
- 
 }
 
 
 extension addSigninInfo : UIImagePickerControllerDelegate & UINavigationControllerDelegate{
-    
     func openGallery(){
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
         picker.sourceType = .photoLibrary
@@ -116,13 +95,7 @@ extension addSigninInfo : UIImagePickerControllerDelegate & UINavigationControll
             profileImage.image = img
             dismiss(animated: true, completion: nil)
             UserInfo.shared.profilePhoto = "\(imgURL)"
-            
-            
         }
-        
     }
-    
-    
-    
 }
 
